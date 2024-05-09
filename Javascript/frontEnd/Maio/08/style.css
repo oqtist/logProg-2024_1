@@ -1,0 +1,35 @@
+p {
+	color: rgb(95, 0, 95);
+}
+
+.texto-verde {
+	color: rgb(170, 189, 0);
+}
+
+#texto-unico {
+	color: black;
+}
+
+.fora {
+	width: 400px;
+	height: 200px;
+	/* background-color: red; */
+	background-image: url(https://wiki.teamfortress.com/w/images/7/7b/Soldier.png);
+	background-size: 9.132%;
+	padding: 30px;
+	border: 2px solid rgb(138, 0, 80);
+}
+
+.dentro {
+	width: 200px;
+	height: 100px;
+	background: linear-gradient(rgb(255, 0, 64), rgb(255, 255, 185));
+	margin: auto;
+	border: 2px solid salmon;
+}
+
+body {
+	background: linear-gradient(pink, rgb(218, 81, 218), rgb(91, 166, 216));
+	background-attachment: fixed;
+	text-align: center;
+}
