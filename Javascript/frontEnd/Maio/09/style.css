@@ -1,0 +1,47 @@
+#links-array {
+    margin: 10px 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    margin: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+#media {
+    margin: 5px;
+}
+
+#ex5-bacteria {
+    border: 2px solid rgb(68, 128, 0);
+    width: fit-content;
+    margin: 15px;
+    padding: 15px 25px;
+}
+
+#ex5-virus {
+    border: 2px solid rgb(255, 72, 0);
+    width: fit-content;
+    margin: 15px;
+    padding: 15px 25px;
+}
+
+#ex5-ambos {
+    border: 2px solid rgb(255, 0, 0);
+    width: fit-content;
+    margin: 15px;
+    padding: 15px 25px;
+}
+
+#ex5-doencas {
+    border: 2px solid rgb(0, 0, 0);
+    width: fit-content;
+    margin: 15px;
+    padding: 15px 25px;
+
+}
+
+#ex5-doencas {
+    text-align: center;
+}
