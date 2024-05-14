@@ -128,11 +128,13 @@ while (n2 < 0 || n2 > 24) {
 
 somaDisp.innerHTML = (`A soma dos valores nas posições ${n1} e ${n2} é ${array[n1] + array[n2]}`)
 
-let existe = Number(prompt('Digite um número para saber se ele existe no vetor:'))
-if (array.indexOf(existe) != -1) {
-    alert(`O valor está presente no array na posição ${(array.indexOf(existe))}.`)
-} else {
-    alert(`O valor não existe no array.`)
+function busca() {
+    let existe = Number(prompt('Digite um número para saber se ele existe no vetor:'))
+    if (array.indexOf(existe) != -1) {
+        alert(`O valor está presente no array na posição ${(array.indexOf(existe))}.`)
+    } else {
+        alert(`O valor não existe no array.`)
+    }
 }
 
 for (i = 0; i < array.length; i++) {
