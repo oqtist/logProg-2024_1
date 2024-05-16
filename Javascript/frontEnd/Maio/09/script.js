@@ -1,31 +1,22 @@
 function ex1() {
     let notas = []
-    let maior
-    let menor
     let soma = 0
-    let num
 
     let media = document.getElementById('media')
 
     for (i = 0; i < 6; i++) {
-        num = Number(prompt('Digite uma nota: '))
+        let num = Number(prompt('Digite uma nota: '))
         notas.push(num)
-        soma += num
-        console.log(maior)
-        if (i == 0) {
-            maior = num
-            menor = num
-        }
-        if (num > maior) {
-            maior = num
-        }
-        if (num < menor) {
-            menor = num
-        }
     }
 
-    soma -= (maior + menor)
-    soma /= notas.length
+    notas.sort((a, b) => a - b)
+    console.log(notas)
+    
+    for(i=1;i<5;i++) {
+        soma += notas[i]
+    }
+
+    soma /= 4
 
     media.innerHTML = (`A média das notas é ${soma.toFixed(1)}.`)
 }
@@ -37,7 +28,7 @@ function ex2() {
 
     for (i = 0; i < 5; i++) {
         let num = Number(prompt('Digite um número:'))
-        if (num % 2 != 0) {
+        if (num % 2 == 1) {
             impares.push(num)
             soma += num
         }
@@ -74,7 +65,6 @@ function ex3() {
 }
 
 function ex4() {
-    let houve
     let anos = []
     let ultimoAno
     let detect = false
@@ -186,17 +176,109 @@ function ex6() {
     cond1.innerHTML = (`<hr>Houve(ram) ${abaixoCinquenta.length} produto(s) abaixo de R$50.`)
 
     cond2.innerHTML = (`<hr>Lista de produtos que custaram entre R$50 e R$100:<br>${nomesProdutos}`)
-    
-    if(soma > 0) {
+
+    if (soma > 0) {
         cond3.innerHTML = (`<hr>A média do preço dos produtos cujos respectivos valores supera a marca de R$100 é: ${soma}`)
     }
-    
+
 }
 
 function ex7() {
     let sabores = []
+    let saboresDisp = []
+    let parar = false
 
-    for(i=-1;i>-1;i++) {
-        
+    let pilhaDisp = document.getElementById('ex7-pilha')
+
+    alert('Boas-Vindas!')
+    while (parar == false) {
+        let opcao = Number(prompt('Escolha uma opção:\n1) Adicionar Sabor\n2) Remover Sabor\n3) Visualizar Sorvete\n4) Finalizar Pedido'))
+        switch (opcao) {
+            case 1:
+                if (sabores.length > 3) {
+                    alert('Limite de sabores atingido.')
+                } else {
+                    sabores.push(prompt('Escreva o nome do sabor que deseja adicionar:'))
+                }
+                break
+            case 2:
+                if (sabores.length > 0) {
+                    let r = sabores.pop(1)
+                    alert(`Sabor '${r}' removido.`)
+                } else {
+                    alert('Não existem sabores adicionados!')
+                }
+                break
+            case 3:
+                if (sabores.length < 1) {
+                    alert('Seu sorvete não possui sabores!')
+                } else {
+                    alert(`Seu sorvete está composto pelas seguintes camadas: ${sabores.join(', ')}`)
+                }
+                break
+            case 4:
+                if (sabores.length > 0) {
+                    parar = true
+                } else {
+                    alert('Adicione pelo menos um sabor!')
+                }
+                break
+            default:
+                alert('Opção Inválida.')
+                break
+        }
+    }
+
+    for (i = 0; i < sabores.length; i++) {
+        pilhaDisp.innerHTML += (`<br>${i + 1}ª Camada: ${sabores[i]}`)
+    }
+}
+
+function ex8() {
+    let menu = true
+    let nomes = []
+
+    while (menu == true) {
+        let opcao = Number(prompt('======== MENU ========\n 1) Cadastrar nome\n 2) Excluir nome\n 3) Editar um nome\n 4) Pesquisar Nome no Cadastro\n 5) Listar Nomes Cadastrados\n 0) Encerrar Programa'))
+        switch (opcao) {
+            case 1:
+                nomes.push(prompt('Digite o nome a ser cadastrado:'))
+                break
+            case 2:
+                let apagar = nomes.indexOf(prompt('Digite o nome que deseja apagar:'))
+                if (apagar != -1) {
+                    nomes.splice(apagar, 1)
+                } else {
+                    alert('O nome informado não existe no cadastro.')
+                }
+                break
+            case 3:
+                let editar = nomes.indexOf(prompt('Digite o nome que deseja editar:'))
+                if (editar != -1) {
+                    let editar2 = prompt('Faça a edição:')
+                    nomes.splice(editar, 1, editar2)
+                } else {
+                    alert('O nome informado não existe no cadastro.')
+                }
+                break
+            case 4:
+                let pesquisa = nomes.indexOf(prompt('Digite o nome a ser pesquisado:'))
+                if (pesquisa != -1) {
+                    alert(`O nome pesquisado consta na ${pesquisa}ª posição do cadastro.`)
+                } else {
+                    alert('O nome informado não existe no cadastro.')
+                }
+                break
+            case 5:
+                if (nomes.length > 0) {
+                    alert(`Nomes constantes no cadastro:\n${nomes}`)
+                }
+                break
+            case 0:
+                menu = false
+                break
+            default:
+                alert('Opção Inválida')
+        }
     }
 }
