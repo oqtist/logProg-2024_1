@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <hr>
+    <form onsubmit="calcularIMC(event)"">
+    
+        <label for="id_nome">Nome:</label>
+        <input type="text" name="nomeUsuario" id="id_nome">
+
+        <label for="id_altura">Altura: (em m)</label>
+        <input type="text" name="alturaUsuario" id="id_altura" placeholder="Ex.: 1.70">
+
+        <label for="id_peso">Peso: (em kg)</label>
+        <input type="number" name="pesoUsuario" id="id_peso">
+
+        <label for="id_profissao">Profissão:</label>
+        <input type="text" name="profissaoUsuario" id="id_profissao">
+
+        <label for="id_foto">Foto:</label>
+        <input type="url" name="imagemUsuario" id="id_foto" placeholder="URL da imagem">
+
+        <button type="submit">Calcular IMC</button>
+    </form>
+    <hr>
+    <div id="display-final">
+        <img src="" alt="">
+        <p id="classificaoImc" class="itemsDisplay"></p>
+        <p id="nomeDisplay" class="itemsDisplay"></p>
+        <p id="alturaDisplay" class="itemsDisplay"></p>
+        <p id="pesoDisplay" class="itemsDisplay"></p>
+        <p id="profissaoDisplay" class="itemsDisplay"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

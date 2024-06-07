@@ -1,0 +1,33 @@
+p {
+    color: rgb(154, 255, 255);
+    text-shadow: 1px 1px 4px rgb(0, 183, 255) ;
+}
+
+img {
+    width: 100px;
+}
+
+body {
+    background-color: rgb(255, 241, 243);
+    font-family: "Comic Sans MS";
+    color: rgb(255, 159, 191);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: pink;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 136, 156);
+    color: rgb(255, 80, 109);
+}
+
+hr {
+    color: palevioletred;
+    width: 250px;
+}
+
+#divInput {
+    margin: 20px;
+}
