@@ -1,0 +1,16 @@
+#quadradoPrismatico {
+    background-color: midnightblue;
+    padding: 7px;
+    margin: 7px;
+    width: 70px;
+    height: 70px;
+    color: white;
+    text-align: center;
+}
+
+#divInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+}
