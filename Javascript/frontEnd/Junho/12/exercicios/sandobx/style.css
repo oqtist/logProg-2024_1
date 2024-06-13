@@ -1,0 +1,16 @@
+.oculta {
+    display: none
+}
+
+#me-esconda-haha {
+    border: solid slategray 2px;
+    width:max-content;
+    padding: 50px;
+    text-align: center;
+    color: rgb(39, 0, 0);
+}
+
+#botao-x {
+    position: relative;
+    
+}

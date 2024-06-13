@@ -1,0 +1,83 @@
+.links-nav:hover {
+    font-weight: bolder;
+    color: rgb(0, 116, 52);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(32, 158, 89);
+}
+
+#botao {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    background-color: rgb(175, 255, 227);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+button {
+    background-color:   rgb(175, 255, 227);
+    border: rgb(32, 158, 89) solid 1px;
+    border-radius: 4px;
+    padding: 20px;
+    color: rgb(32, 158, 89);
+}
+
+button:active {
+    color: white;
+    background-color: black;
+    border: white solid 1px;
+}
+
+#lista-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 116, 52);
+}
+
+#input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-lista:visited {
+    color: yellowgreen;
+}
+
+hr {
+    color: rgb(44, 138, 48);
+    margin: 25px 0px;
+}
+
+input {
+    background-color: rgb(175, 255, 227);
+    border: rgb(32, 158, 89) solid 1px;
+    color: rgb(32, 158, 89);
+}
+
+input:focus {
+    color: white;
+    background-color: dimgrey;
+    border: dimgray solid 1px;
+}
+
+body {
+    background-color: rgb(230, 255, 247);
+}

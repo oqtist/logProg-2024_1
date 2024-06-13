@@ -1,0 +1,19 @@
+.vermelho {
+    background-color: rgb(112, 0, 0);
+    color: white;
+    display: flex;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    font-family: gothici;
+}
+
+.sumir {
+    display: none;
+}
+
+.visitado:visited {
+    display: none;
+}

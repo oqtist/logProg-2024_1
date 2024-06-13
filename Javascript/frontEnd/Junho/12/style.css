@@ -1,0 +1,38 @@
+.principal {
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.principal:hover {
+    background-color: rgb(185, 222, 255);
+}
+
+.principal:active {
+    background-color: rgb(207, 255, 185);
+}
+
+.texto {
+    color: red;
+}
+
+.texto:focus {
+    background-color: rgb(255, 198, 198);
+    color: brown;
+}
+
+.btn-enviar {
+    color: red;
+}
+
+a:visited {
+    color: lawngreen;
+}
+
+a {
+    text-decoration: none;
+}
