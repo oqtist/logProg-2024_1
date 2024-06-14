@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(33, 22, 44);
+    color: yellow;
+    filter: blur(1px);
+}
+
+h1 {
+    color: yellow;
+    font-family: freestyle script;
+    font-weight: lighter;
+    font-size: 40pt;
+}
+
+h1:hover {
+    filter: drop-shadow(1px 1px 3px white);
+    color: rgb(255, 255, 106);
+}
+
+#texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: double yellow;
+}
