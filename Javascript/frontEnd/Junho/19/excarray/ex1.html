@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista VIP</title>
+</head>
+
+<body onload="buscar()">
+    <h1>Lista VIP</h1>
+    <hr>
+    <label for="id-nomes">Digite um nome a ser incluído:</label>
+    <input type="text" name="nomes" id="id-nomes">
+    <button onclick="enviar()">+ Enviar +</button>
+    <label for="id-remover-nomes">Digite o índice de um nome para removê-lo:</label>
+    <input type="number" name="remover-nomes" id="id-remover-nomes">
+    <button onclick="retirar()">- Remover -</button>
+    <hr>
+    <ol>
+        <p id="paragrafo-nomes"></p>
+    </ol>
+    <hr>
+    <a href="index.html"><- Voltar</a>
+            <script src="ex1.js"></script>
+</body>
+
+</html>
