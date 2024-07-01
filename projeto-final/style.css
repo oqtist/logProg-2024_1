@@ -1,3 +1,7 @@
+.flex {
+    display: flex;
+}
+
 .oculta {
     display: none;
 }
@@ -6,6 +10,25 @@ body {
     background-color: rgb(44, 8, 8);
     margin: 0px;
     font-family: 'poppins';
+}
+
+#botao-apagar-filme {
+    background-color: #500c0c;
+    color: wheat;
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    font-size: 15pt;
+    font-family: 'poppins', 'sans-serif';
+    margin: 30px 0px 0px 0px;
+}
+
+#botao-apagar-filme:hover {
+    background-color: #942222;
+}
+
+#botao-apagar-filme:active {
+    background-color: #500c0c;
 }
 
 #div-container {
@@ -26,7 +49,7 @@ img {
     margin: 20px 0px 0px 40px;
 }
 
-a{
+a {
     text-decoration: none;
     color: wheat;
     justify-content: space-between;
@@ -52,7 +75,7 @@ a:hover {
     justify-content: center;
 }
 
-.div-filmes-class:hover{
+.div-filmes-class:hover {
     color: wheat;
     box-shadow: #af0000 10px 5px 10px;
 }
@@ -60,7 +83,7 @@ a:hover {
 #div-adicionar-filme {
     border: solid rgb(100, 27, 27) 1px;
     width: 250px;
-    max-height: 375px;
+    max-height: 190px;
     padding: 90px 0px;
     margin: 30px;
     display: flex;
@@ -88,7 +111,7 @@ a:hover {
     border: none;
     background-color: transparent;
     font-size: x-large;
-    color: rgb(94,21,21);
+    color: rgb(94, 21, 21);
 }
 
 #div-adicionar-filme button:hover {
@@ -123,7 +146,7 @@ a:hover {
 
 #div-popup-filme {
     border-radius: 10px;
-    padding: 75px;
+    padding: 50px;
     width: max-content;
     text-align: center;
     height: max-content;
@@ -132,9 +155,12 @@ a:hover {
     top: 30vh;
     background-color: #691818;
     color: wheat;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#div-popup input, textarea {
+#div-popup input,
+textarea {
     background-color: #500c0c;
     border: none;
     color: wheat;
@@ -189,7 +215,7 @@ form button:active {
 header {
     background-color: #842222;
     padding: 10px;
-    border-bottom:groove #500c0c 3px;
+    border-bottom: groove #500c0c 3px;
 
 }
 
