@@ -40,7 +40,7 @@ function enviarFilme(evento) {
     const genero = inputs.get('genero')
     const sinopse = inputs.get('sinopse')
 
-    informacoesFilmes.push(titulo, urlCapa, 'Título: ' + titulo, 'Diretor: ' + diretor, 'Ano de Lançamento: ' + dataLancamento, 'Gênero: ' + genero, 'Sinopse: ' + sinopse)
+    informacoesFilmes.push(urlCapa, 'Título: ' + titulo, 'Diretor: ' + diretor, 'Ano de Lançamento: ' + dataLancamento, 'Gênero: ' + genero, 'Sinopse: ' + sinopse)
 
     const arrayConvertido = JSON.stringify(informacoesFilmes)
     localStorage.setItem('arraySalvo', arrayConvertido)
@@ -57,88 +57,32 @@ if (localStorage.getItem('arraySalvo')) {
 
 function switchCarregar() {
     switch (true) {
-        case informacoesFilmes.length >= 77:
+        case informacoesFilmes.length >= 66:
             divMenu.innerHTML = (`<p>O total de filmes foi alcançado. Tente remover um filme.</p>`)
-            filme11.style.backgroundImage = `url("${informacoesFilmes[71]}")`;
-            if (informacoesFilmes[70]) {
-                filme11.innerHTML = `${informacoesFilmes[70]}`
-            } else {
-                filme11.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 7:
-            filme1.style.backgroundImage = `url("${informacoesFilmes[1]}")`;
-            if (informacoesFilmes[0]) {
-                filme1.innerHTML = `${informacoesFilmes[0]}`
-            } else {
-                filme1.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 14:
-            filme2.style.backgroundImage = `url("${informacoesFilmes[8]}")`;
-            if (informacoesFilmes[7]) {
-                filme2.innerHTML = `${informacoesFilmes[7]}`
-            } else {
-                filme2.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 21:
-            filme3.style.backgroundImage = `url("${informacoesFilmes[15]}")`;
-            if (informacoesFilmes[14]) {
-                filme3.innerHTML = `${informacoesFilmes[14]}`
-            } else {
-                filme3.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 28:
-            filme4.style.backgroundImage = `url("${informacoesFilmes[22]}")`;
-            if (informacoesFilmes[21]) {
-                filme4.innerHTML = `${informacoesFilmes[21]}`
-            } else {
-                filme4.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 35:
-            filme5.style.backgroundImage = `url("${informacoesFilmes[29]}")`;
-            if (informacoesFilmes[28]) {
-                filme5.innerHTML = `${informacoesFilmes[28]}`
-            } else {
-                filme5.innerHTML = ``
-            }
+            filme11.style.backgroundImage = `url("${informacoesFilmes[60]}")`;
+        case informacoesFilmes.length >= 6:
+            filme1.style.backgroundImage = `url("${informacoesFilmes[0]}")`;
+        case informacoesFilmes.length >= 12:
+            filme2.style.backgroundImage = `url("${informacoesFilmes[6]}")`;
+        case informacoesFilmes.length >= 18:
+            filme3.style.backgroundImage = `url("${informacoesFilmes[12]}")`;
+        case informacoesFilmes.length >= 24:
+            filme4.style.backgroundImage = `url("${informacoesFilmes[18]}")`;
+        case informacoesFilmes.length >= 30:
+            filme5.style.backgroundImage = `url("${informacoesFilmes[24]}")`;
+        case informacoesFilmes.length >= 36:
+            filme6.style.backgroundImage = `url("${informacoesFilmes[30]}")`;
         case informacoesFilmes.length >= 42:
-            filme6.style.backgroundImage = `url("${informacoesFilmes[36]}")`;
-            if (informacoesFilmes[35]) {
-                filme6.innerHTML = `${informacoesFilmes[35]}`
-            } else {
-                filme6.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 49:
-            filme7.style.backgroundImage = `url("${informacoesFilmes[43]}")`;
-            if (informacoesFilmes[42]) {
-                filme7.innerHTML = `${informacoesFilmes[42]}`
-            } else {
-                filme7.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 56:
-            filme8.style.backgroundImage = `url("${informacoesFilmes[50]}")`;
-            if (informacoesFilmes[49]) {
-                filme8.innerHTML = `${informacoesFilmes[49]}`
-            } else {
-                filme8.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 63:
-            filme9.style.backgroundImage = `url("${informacoesFilmes[57]}")`;
-            if (informacoesFilmes[56]) {
-                filme9.innerHTML = `${informacoesFilmes[56]}`
-            } else {
-                filme9.innerHTML = ``
-            }
-        case informacoesFilmes.length >= 70:
-            filme10.style.backgroundImage = `url("${informacoesFilmes[64]}")`;
-            if (informacoesFilmes[63]) {
-                filme10.innerHTML = `${informacoesFilmes[63]}`
-            } else {
-                filme10.innerHTML = ``
-            }
+            filme7.style.backgroundImage = `url("${informacoesFilmes[36]}")`;
+        case informacoesFilmes.length >= 48:
+            filme8.style.backgroundImage = `url("${informacoesFilmes[42]}")`;
+        case informacoesFilmes.length >= 54:
+            filme9.style.backgroundImage = `url("${informacoesFilmes[48]}")`;
+        case informacoesFilmes.length >= 60:
+            filme10.style.backgroundImage = `url("${informacoesFilmes[54]}")`;
             break
         default:
             filme1.style.backgroundImage = ''
-            filme1.innerHTML = ''
             break
     }
 }
@@ -150,7 +94,7 @@ function popupFilme(evento) {
     switch (evento.target.id) {
         case 'filme-1':
             if (informacoesFilmes[0]) {
-                for (i = 2; i < 7; i++) {
+                for (i = 1; i < 6; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                 }
                 divPopupFilme.classList.remove('oculta')
@@ -159,8 +103,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-2':
-            if (informacoesFilmes[7]) {
-                for (i = 9; i < 14; i++) {
+            if (informacoesFilmes[6]) {
+                for (i = 7; i < 12; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -169,8 +113,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-3':
-            if (informacoesFilmes[14]) {
-                for (i = 16; i < 21; i++) {
+            if (informacoesFilmes[12]) {
+                for (i = 13; i < 18; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -179,8 +123,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-4':
-            if (informacoesFilmes[21]) {
-                for (i = 23; i < 28; i++) {
+            if (informacoesFilmes[18]) {
+                for (i = 19; i < 24; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -189,8 +133,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-5':
-            if (informacoesFilmes[28]) {
-                for (i = 30; i < 35; i++) {
+            if (informacoesFilmes[24]) {
+                for (i = 25; i < 30; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -199,8 +143,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-6':
-            if (informacoesFilmes[35]) {
-                for (i = 37; i < 42; i++) {
+            if (informacoesFilmes[30]) {
+                for (i = 31; i < 36; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -209,8 +153,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-7':
-            if (informacoesFilmes[42]) {
-                for (i = 44; i < 49; i++) {
+            if (informacoesFilmes[36]) {
+                for (i = 37; i < 42; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -219,8 +163,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-8':
-            if (informacoesFilmes[49]) {
-                for (i = 51; i < 56; i++) {
+            if (informacoesFilmes[42]) {
+                for (i = 43; i < 48; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -229,8 +173,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-9':
-            if (informacoesFilmes[56]) {
-                for (i = 58; i < 63; i++) {
+            if (informacoesFilmes[48]) {
+                for (i = 49; i < 54; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -239,8 +183,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-10':
-            if (informacoesFilmes[63]) {
-                for (i = 65; i < 70; i++) {
+            if (informacoesFilmes[54]) {
+                for (i = 55; i < 60; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -249,8 +193,8 @@ function popupFilme(evento) {
             divPopupFilme.innerHTML += (`<button onclick="apagarFilme()" id="botao-apagar-filme">Apagar Filme</button>`)
             break
         case 'filme-11':
-            if (informacoesFilmes[70]) {
-                for (i = 72; i < 77; i++) {
+            if (informacoesFilmes[60]) {
+                for (i = 61; i < 66; i++) {
                     divPopupFilme.innerHTML += (`${informacoesFilmes[i]}<br>`)
                     divPopupFilme.classList.remove('oculta')
                 }
@@ -266,37 +210,37 @@ function popupFilme(evento) {
 function apagarFilme() {
     switch (contador) {
         case 1:
-            informacoesFilmes.splice(0, 7)
+            informacoesFilmes.splice(0, 6)
             break
         case 2:
-            informacoesFilmes.splice(7, 7)
+            informacoesFilmes.splice(6, 6)
             break
         case 3:
-            informacoesFilmes.splice(14, 7)
+            informacoesFilmes.splice(12, 6)
             break
         case 4:
-            informacoesFilmes.splice(21,7)
+            informacoesFilmes.splice(18,6)
             break
         case 5:
-            informacoesFilmes.splice(28,7)
+            informacoesFilmes.splice(24,6)
             break
         case 6:
-            informacoesFilmes.splice(35,7)
+            informacoesFilmes.splice(30,6)
             break
         case 7:
-            informacoesFilmes.splice(42,7)
+            informacoesFilmes.splice(36,6)
             break
         case 8:
-            informacoesFilmes.splice(49,7)
+            informacoesFilmes.splice(42,6)
             break
         case 9:
-            informacoesFilmes.splice(56,7)
+            informacoesFilmes.splice(48,6)
             break
         case 10:
-            informacoesFilmes.splice(63,7)
+            informacoesFilmes.splice(54,6)
             break
         case 11:
-            informacoesFilmes.splice(70,7)
+            informacoesFilmes.splice(60,6)
             break
     }
     divPopupFilme.classList.add('oculta')
