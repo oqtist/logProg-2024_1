@@ -24,6 +24,7 @@
         <div id="div-popup" class="oculta">
             <button onclick="fecharPopup()" class="fechar-popup">x</button>
             <h2>Informações do Filme:</h2>
+            <h3>Todos os dados devem ser preenchidos.</h3>
             <form onsubmit="enviarFilme(event)">
                 <label for="id-foto-capa">Foto da Capa:</label>
                 <input type="url" name="foto-da-capa" id="id-foto-capa" placeholder="URL da Capa" class="items-form">
@@ -41,7 +42,7 @@
                 <input type="text" name="genero" id="id-genero" class="items-form">
 
                 <label for="id-sinopse">Sinopse:</label>
-                <textarea name="sinopse" id="id-sinopse" cols="15" rows="3" class="items-form"></textarea>
+                <textarea name="sinopse" id="id-sinopse" cols="15" rows="1" class="items-form"></textarea>
                 <button type="submit" onclick="fecharPopup()" class="items-form">Adicionar
                     Filme</button>
             </form>
@@ -50,7 +51,7 @@
     <header>
         <img src="logo-header.png" alt="Logo do Cinema 'Absolute Cinema'">
         <nav>
-            <a href="index.html" class="nav-elementos">Filmes</a>
+            <a href="index.html" class="nav-elementos" id="nav-filmes">Filmes</a>
             <a href="personagens.html" class="nav-elementos">Protagonistas</a>
         </nav>
     </header>
@@ -72,8 +73,6 @@
             <div class="div-filmes-class" id="filme-10" onclick="popupFilme(event)"></div>
             <div class="div-filmes-class" id="filme-11" onclick="popupFilme(event)"></div>
         </div>
-
-        <button onclick="clearLocalStorage()">Limpar Local Storage</button>
     </main>
     <footer>
         © 2024 lololol | Todos os direitos reservados.
